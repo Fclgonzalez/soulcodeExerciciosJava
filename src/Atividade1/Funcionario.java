@@ -4,13 +4,13 @@ public class Funcionario {
     public String nome;
     public int idade;
     public String cargo;
-    public String situacao;
+    public Boolean ativo;
 
-    public Funcionario(String nome, int idade, String cargo, String situacao) {
+    public Funcionario(String nome, int idade, String cargo) {
         this.nome = nome;
         this.idade = idade;
         this.cargo = cargo;
-        this.situacao = situacao;
+        this.ativo = true;
     }
 
     public String getNome() {
@@ -36,17 +36,22 @@ public class Funcionario {
     public void setCargo(String cargo){
         this.cargo = cargo;
     }
-    public String getSituacao() {
-        return situacao;
+    public Boolean getAtivo() {
+        return ativo;
     }
 
-    public void setSituacao(String situacao){
-        this.situacao = situacao;
+    public void setAtivo(Boolean ativo){
+        this.ativo = ativo;
     }
 
     public void demitirFuncionario() {
-        setSituacao("Inativo");
-        System.out.println("O funcionário " + getNome() + " foi demitido e está com situação: " + getSituacao());
+        if (getAtivo()) {
+            setAtivo(false);
+            System.out.println("O funcionário " + getNome() + " foi demitido e está com situação: Inativo");
+        } else {
+            System.out.println("O funcionário" + getNome() + " já está inativo");
+
+        }
     }
 
     public void trocarCargoFuncionario (String cargo) {
@@ -60,7 +65,7 @@ public class Funcionario {
 
     public void fazerAniversario() {
         this.idade++ ;
-        System.out.println("O funcionário fez aniversário e agora tem " + getIdade() + " anos.");
+        System.out.println("O funcionário " + getNome() + " fez aniversário e agora tem " + getIdade() + " anos.");
     }
 
 }

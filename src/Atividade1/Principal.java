@@ -2,10 +2,10 @@ package Atividade1;
 
 public class Principal {
     public static void main(String[] args) {
-        Funcionario f1 = new Funcionario("Lucas", 27, "Desenvolvedor Júnior", "Ativo");
-        Funcionario f2 = new Funcionario("Maria", 27, "Desenvolvedor Júnior", "Ativo");
-        Funcionario f3 = new Funcionario("Ana", 32, "Desenvolvedor Senior", "Ativo");
-        Funcionario f4 = new Funcionario("João", 27, "Desenvolvedor Pleno", "Ativo");
+        Funcionario f1 = new Funcionario("Lucas", 27, "Desenvolvedor Júnior");
+        Funcionario f2 = new Funcionario("Maria", 27, "Desenvolvedor Júnior");
+        Funcionario f3 = new Funcionario("Ana", 32, "Desenvolvedor Senior");
+        Funcionario f4 = new Funcionario("João", 27, "Desenvolvedor Pleno");
 
         f1.demitirFuncionario();
 
